@@ -1,0 +1,167 @@
+html{
+    background-color: #5F6A6A;
+}
+.content{
+    height:2000px;
+    width:1450px;
+    align-items: center;
+    border-radius: 15px;
+    margin-left:30px;
+    background-color: #151515;
+}
+h1{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 5%;
+    padding-left: 5%;
+    font-size: 45px;
+}
+.ingredients{
+    color: #fff;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.ingredients{
+    width:800px;
+    height: 250px;
+    background-color: #000000 ;
+    border-radius: 10px;
+    align-items: center;
+    margin-left: 15%;
+    margin-top: 5%;
+
+}
+h2{
+    text-align: left;
+    padding-top: 15px;
+    padding-left: 15px;
+    color:#fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+.Step{
+    font-size: 25px;
+    margin-top: 10%;
+    margin-left: 20px;
+    color:#fff;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    height: 500px;
+    border-radius: 10px;
+    width:700px;
+    background-color: #272727;
+    
+}
+.FirstStep{
+    margin-left: 15px;
+    padding-top: 5px;
+}
+.SecondStep{
+    margin-left: 15px;
+    padding-top: 5px;
+}
+.ThirdStep{
+    margin-left: 15px;
+    padding-top: 5px;
+}
+.FourthStep{
+    margin-left: 15px;
+    padding-top: 5px;
+}
+.FifthStep{
+    margin-left: 15px;
+    padding-top: 5px;
+}
+.recipe{
+    margin-top: 15px;
+    margin-left:20%;
+}
+.info-recipe{
+    height: 300px;
+    width: 400px;
+    border: solid;
+    float: right;
+    border-width: 2px;
+    margin-right: 10%;
+    border-color: #ffff;
+    border-radius: 10px;
+}
+p{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 10px;
+    font-size: 20px;
+}
+#healthy{
+    margin-left: 10px;
+    padding-top: 15px;
+}
+#difficulty{
+    padding-top: 20px;
+}
+#title-preparation{
+    padding-top: 15px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+}
+#bar-text1{
+    font-family: 'Roboto', sans-serif;
+    Color: #ffff;
+}
+.bar{
+    background-color: black;
+    box-shadow: #4b4b4b;
+    height: 150px;
+    width: 300px;
+    margin-top: -20px;
+    margin-left: -8px;
+    align-items: center;
+    text-align: center;
+    float: left;
+    border-radius: 5px;
+    margin-top:15px;
+}
+#icon{
+    float: left;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+
+#task {
+    background-color: salmon;
+    color: white;
+    font-size: 23px;
+    border-color: #15151500;
+    cursor: pointer;
+    height: 60px;
+    width: 150px;
+  }
+
+  
+#task:hover {
+    background-color: rgb(186, 92, 82);
+    color: white;
+    transition-duration: 0.4s;
+  }
+
+.task-bar{
+    height: 60px;
+    width: 1700px;
+    background-color: salmon;
+    position: fixed;
+    margin-top: -30px;
+    align-items: center;
+    margin-left: -15px ;
+}
+#App-Name{
+    font-size: 35px;
+    padding-left: 15%;
+    padding-right: 15px;
+    float: left;
+    margin-top: 5px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    justify-content: center;
+}

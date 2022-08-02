@@ -1,0 +1,898 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: calc(16px + (24 - 16)*(100vw - 320px)/(1920 - 320));
+}
+body, button, input {
+  font: 1em Hind, sans-serif;
+  line-height: 1.5em;
+}
+body, input {
+  color: #171717;
+}
+body, .search-bar {
+  display: flex;
+}
+
+.search-bar input,
+.search-btn, 
+.search-btn:before, 
+.search-btn:after {
+  transition: all 0.25s ease-out;
+}
+.search-bar input,
+.search-btn {
+  width: 3em;
+  height: 3em;
+}
+.search-bar input:invalid:not(:focus),
+.search-btn {
+  cursor: pointer;
+}
+.search-bar,
+.search-bar input:focus,
+.search-bar input:valid  {
+  width: 100%;
+}
+.search-bar input:focus,
+.search-bar input:not(:focus) + .search-btn:focus {
+  outline: transparent;
+}
+.search-bar {
+  margin: auto;
+  padding: 1.5em;
+  justify-content: center;
+  max-width: 30em;
+}
+.search-bar input {
+  background: transparent;
+  border-radius: 1.5em;
+  box-shadow: 0 0 0 0.4em #171717 inset;
+  padding: 0.75em;
+  transform: translate(0.5em,0.5em) scale(0.5);
+  transform-origin: 100% 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.search-bar input::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+.search-bar input:focus,
+.search-bar input:valid {
+  background: #fff;
+  border-radius: 0.375em 0 0 0.375em;
+  box-shadow: 0 0 0 0.1em #d9d9d9 inset;
+  transform: scale(1);
+}
+.search-btn {
+  background: #171717;
+  border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
+  padding: 0.75em;
+  position: relative;
+  transform: translate(0.25em,0.25em) rotate(45deg) scale(0.25,0.125);
+  transform-origin: 0 50%;
+}
+.search-btn:before, 
+.search-btn:after {
+  content: "";
+  display: block;
+  opacity: 0;
+  position: absolute;
+}
+.search-btn:before {
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.2em #f1f1f1 inset;
+  top: 0.75em;
+  left: 0.75em;
+  width: 1.2em;
+  height: 1.2em;
+}
+.search-btn:after {
+  background: #f1f1f1;
+  border-radius: 0 0.25em 0.25em 0;
+  top: 51%;
+  left: 51%;
+  width: 0.75em;
+  height: 0.25em;
+  transform: translate(0.2em,0) rotate(45deg);
+  transform-origin: 0 50%;
+}
+.search-btn span {
+  display: inline-block;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}
+
+/* Active state */
+.search-bar input:focus + .search-btn,
+.search-bar input:valid + .search-btn {
+  background: #2762f3;
+  border-radius: 0 0.375em 0.375em 0;
+  transform: scale(1);
+}
+.search-bar input:focus + .search-btn:before, 
+.search-bar input:focus + .search-btn:after,
+.search-bar input:valid + .search-btn:before, 
+.search-bar input:valid + .search-btn:after {
+  opacity: 1;
+}
+.search-bar input:focus + .search-btn:hover,
+.search-bar input:valid + .search-btn:hover,
+.search-bar input:valid:not(:focus) + .search-btn:focus {
+  background: #0c48db;
+}
+.search-bar input:focus + .search-btn:active,
+.search-bar input:valid + .search-btn:active {
+  transform: translateY(1px);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  
+
+  .search-bar input {
+    box-shadow: 0 0 0 0.4em #f1f1f1 inset;
+  }
+  .search-bar input:focus,
+  .search-bar input:valid {
+    background: #3d3d3d;
+    box-shadow: 0 0 0 0.1em #3d3d3d inset;
+  }
+  .search-btn {
+    background: #f1f1f1;
+  }
+}
+
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+}
+.link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+#instructions{
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font: bold;
+    text-align: center;
+    color:#fff;
+}
+html{
+    background-color: #151515;
+}
+.background{
+    height:1200px;
+    width: auto;
+    margin-left: 80px;
+    margin-right: 80px;
+    background-color: darksalmon;
+    margin-top: 15px;
+    border-radius: 10px;
+
+}
+
+.bread {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  align-items: center;
+  margin-left: 15px;
+
+}
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+}
+
+.form-control + .form-control {
+  margin-top: 1em;
+}
+input[type="checkbox"] {
+  /* ...existing styles */
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+input[type="checkbox"]::before {
+  /* ...existing styles */
+
+  /* Windows High Contrast Mode */
+  background-color: CanvasText;
+}
+.cheese{
+  float: left;
+  position: relative;
+  display: flex;
+  margin-right: 15px;
+  background-color: #383838;
+  margin-left: 5px;
+  text-align: center;
+  height:300px;
+  width: 200px;
+  border-radius: 15px;
+}
+.bacon{
+  position: relative;
+  display: flex;
+  background-color: #383838;
+  text-align: center;
+  height:300px;
+  width: 200px;
+  border-radius: 15px;
+  margin-right: 15px;
+  float: left;
+}
+.bread{
+  float:left;
+  height:300px;
+  width: 200px;
+  background-color: #383838;
+  margin-right: 15px;
+  text-align: center;
+}
+.inside-steak{
+  float:left;
+  height: 200px;
+  width: 200px;
+}
+.inside-cream{
+  float:left;
+  height: 200px;
+  width: 200px;
+}
+
+.inside-butter{
+  float:left;
+  height: 200px;
+  width: 200px;
+}
+
+.inside-flour{
+  float:left;
+  height: 200px;
+  width: 200px;
+}
+.inside-potato{
+  float:left;
+  height: 200px;
+  width: 200px;
+}
+.inside-bread{
+  float:left;
+  height: 200px;
+  width: 200px;
+}
+.inside-cheese{
+  float:left;
+  height: 200px;
+  width: 200px;
+}
+.inside-bacon{
+  float:left;
+  height: 200px;
+  width: 200px;
+}
+.inside-milk{
+  float:left;
+  height: 200px;
+  width: 200px;
+}
+
+.inside-carrots{
+  float:left;
+  height: 200px;
+  width: 200px;
+}
+.steak{
+  float:left;
+  position: relative;
+  display: flex;
+  height:300px;
+  width: 200px;
+  background-color: #383838;
+  margin-right: 15px;
+  text-align: center;
+  border-radius: 15px;
+}
+.pasta{
+  float:left;
+  position: relative;
+  display: flex;
+  height:300px;
+  width: 200px;
+  background-color: #383838;
+  margin-right: 15px;
+  text-align: center;
+  border-radius: 15px;
+}
+.lettuce {
+  float:left;
+  position: relative;
+  display: flex;
+  height:300px;
+  width: 200px;
+  background-color: #383838;
+  margin-right: 15px;
+  text-align: center;
+  border-radius: 15px;
+}
+.onion {
+  float:left;
+  position: relative;
+  display: flex;
+  height:300px;
+  width: 200px;
+  background-color: #383838;
+  margin-left: 5px;
+  margin-right: 10px;
+  text-align: center;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+.rice {
+  float:left;
+  position: relative;
+  display: flex;
+  height:300px;
+  width: 200px;
+  background-color: #383838;
+  margin-right: 15px;
+  text-align: center;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+.egg {
+  float:left;
+  position: relative;
+  display: flex;
+  height:300px;
+  width: 200px;
+  background-color: #383838;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+  border-radius: 15px;
+  margin-top: 15px ;
+}
+.tomato {
+  float:left;
+  margin-left: 15px;
+  margin-top: 15px;
+  position: relative;
+  display: flex;
+  height:300px;
+  width: 200px;
+  background-color: #383838;
+  margin-right: 15px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.milk {
+  float:left;
+  margin-left: 15px;
+  margin-top: 15px;
+  position: relative;
+  display: flex;
+  height:300px;
+  width: 200px;
+  background-color: #383838;
+  margin-right: 15px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.potato {
+  float:left;
+  margin-left: 5px;
+  margin-top: 15px;
+  position: relative;
+  display: flex;
+  height:300px;
+  width: 200px;
+  background-color: #383838;
+  margin-right: 15px;
+  text-align: center;
+  border-radius: 15px;
+}
+.flour {
+  float:left;
+  margin-left: 5px;
+  margin-top: 15px;
+  position: relative;
+  display: flex;
+  height:300px;
+  width: 200px;
+  background-color: #383838;
+  margin-right: 15px;
+  text-align: center;
+  border-radius: 15px;
+}
+.cream {
+  float:left;
+  margin-top: 15px;
+  position: relative;
+  display: flex;
+  height:300px;
+  width: 200px;
+  background-color: #383838;
+  margin-right: 15px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.butter {
+  float:left;
+  margin-top: 15px;
+  position: relative;
+  display: flex;
+  height:300px;
+  width: 200px;
+  background-color: #383838;
+  margin-right: 15px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.carrots {
+  float:left;
+  margin-left: 15px;
+  margin-top: 15px;
+  position: relative;
+  display: flex;
+  height:300px;
+  width: 200px;
+  background-color: #383838;
+  margin-right: 15px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+h2{
+  text-align: center;
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+div.bread:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=0);
+  zoom: 1;
+}
+div.rice:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=0);
+  zoom: 1;
+}
+div.onion:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=0);
+  zoom: 1;
+}
+div.lettuce:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=0);
+  zoom: 1;
+}
+div.cheese:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=0);
+  zoom: 1;
+}
+div.pasta:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=0);
+  zoom: 1;
+}
+div.steak:hover {
+opacity: 0.5;
+  filter: alpha(opacity=0);
+  zoom: 1;
+}  
+div.bacon:hover {
+  opacity: 0.5;
+    filter: alpha(opacity=0);
+    zoom: 1;
+  }  
+  div.pasta:hover {
+  opacity: 0.5;
+    filter: alpha(opacity=0);
+    zoom: 1;
+  }  
+  div.tomato:hover {
+    opacity: 0.5;
+      filter: alpha(opacity=0);
+      zoom: 1;
+    }  
+div.egg:hover {
+opacity: 0.5;
+  filter: alpha(opacity=0);
+  zoom: 1;
+}  
+ 
+div.butter:hover {
+opacity: 0.5;
+  filter: alpha(opacity=0);
+  zoom: 1;
+}  
+
+div.milk:hover {
+  opacity: 0.5;
+    filter: alpha(opacity=0);
+    zoom: 1;
+  }  
+
+  div.potato:hover {
+  opacity: 0.5;
+    filter: alpha(opacity=0);
+    zoom: 1;
+  }
+  div.flour:hover {
+    opacity: 0.5;
+      filter: alpha(opacity=0);
+      zoom: 1;
+    } 
+    div.cream:hover {
+      opacity: 0.5;
+        filter: alpha(opacity=0);
+        zoom: 1;
+      } 
+div.carrots:hover {
+   opacity: 0.5;
+   filter: alpha(opacity=0);
+   zoom: 1;
+      } 
+
+
+
+#sandwich{
+    height:400px;
+    width: 250px;
+    border-radius: 15px;
+   text-align: center;
+  position: relative;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: flex;
+  float: left;
+  align-items: center;
+}
+#cacio{
+    height:400px;
+    width: 250px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 15px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  float: left;
+  align-items: center;
+  
+}
+#glazed-carrots{
+  height:400px;
+  width: 250px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 15px;
+text-align: center;
+position: relative;
+display: flex;
+float: left;
+align-items: center;
+
+}
+#omelette{
+    height:400px;
+    width: 250px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 15px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  float: left;
+  align-items: center;
+}
+#fried-ricebeef{
+  margin-left: 15px;
+  margin-right: 15px;
+    height:400px;
+    width: 250px;
+    border-radius: 15px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  float: left;
+  align-items: center;
+}
+#spaghetti-bolognaise{
+  margin-left: 15px;
+  margin-right: 15px;
+    height:400px;
+    width: 250px;
+    border-radius: 15px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  float: left;
+  align-items: center;
+}
+#carbonara{
+  margin-left: 15px;
+  margin-right: 15px;
+    height:400px;
+    width: 250px;
+    border-radius: 15px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  float: left;
+  align-items: center;
+}
+
+#croque-monsieur{
+  height:400px;
+  width: 250px;
+  border-radius: 15px;
+text-align: center;
+position: relative;
+margin-left: 15px;
+margin-right: 15px;
+display: flex;
+float: left;
+align-items: center;
+}
+
+#potato-salad{
+  height:400px;
+  width: 250px;
+  border-radius: 15px;
+text-align: center;
+position: relative;
+margin-left: 15px;
+margin-right: 15px;
+display: flex;
+float: left;
+align-items: center;
+}
+
+#potato-pancake{
+  height:400px;
+  width: 250px;
+  border-radius: 15px;
+text-align: center;
+position: relative;
+margin-left: 15px;
+margin-right: 15px;
+display: flex;
+float: left;
+align-items: center;
+}
+
+#pasta-cream{
+  height:400px;
+  width: 250px;
+  border-radius: 15px;
+text-align: center;
+position: relative;
+margin-left: 15px;
+margin-right: 15px;
+display: flex;
+float: left;
+align-items: center;
+}
+
+#crispy-potatoes{
+  height:400px;
+  width: 250px;
+  border-radius: 15px;
+text-align: center;
+position: relative;
+margin-left: 15px;
+margin-right: 15px;
+display: flex;
+float: left;
+align-items: center;
+}
+
+#french-fries{
+  height:400px;
+  width: 250px;
+  border-radius: 15px;
+text-align: center;
+position: relative;
+margin-left: 15px;
+margin-right: 15px;
+display: flex;
+float: left;
+align-items: center;
+}
+#beef-croquette{
+  height:400px;
+  width: 250px;
+  border-radius: 15px;
+text-align: center;
+position: relative;
+margin-left: 15px;
+margin-right: 15px;
+display: flex;
+float: left;
+align-items: center;
+}
+
+#risoto{
+  height:400px;
+  width: 250px;
+  border-radius: 15px;
+text-align: center;
+position: relative;
+margin-left: 15px;
+margin-right: 15px;
+display: flex;
+align-items: center;
+}
+
+#boiled-egg{
+  height:400px;
+  width: 250px;
+  border-radius: 15px;
+text-align: center;
+position: relative;
+margin-left: 15px;
+margin-right: 15px;
+display: flex;
+align-items: center;
+}
+
+#mac-cheese{
+  height:400px;
+  width: 250px;
+  border-radius: 15px;
+text-align: center;
+position: relative;
+margin-left: 15px;
+margin-right: 15px;
+display: flex;
+align-items: center;
+}
+
+
+
+#food-title{
+  font-size: 18px;
+  color: #fff;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: lightgreen;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 400px;
+  height:100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+
+#eparateur{
+  border-radius: 10px;
+  background-color: #fff;
+  height: 10px;
+  width: 1100px;
+  position: relative;
+  margin-left: 15%;
+  }
+
+#titlerecipe{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+#time{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+#difficulty{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+.recipes:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #151515;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader > img {
+    width: 100px;
+}
+
+.loader.hidden {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.thumb {
+    height: 100px;
+    border: 1px solid black;
+    margin: 10px;
+}

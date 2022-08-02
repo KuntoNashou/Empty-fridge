@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+#task {
+    background-color: salmon;
+    color: white;
+    font-size: 23px;
+    border-color: #15151500;
+    cursor: pointer;
+    height: 60px;
+    width: 150px;
+  }
+
+  
+#task:hover {
+    background-color: rgb(186, 92, 82);
+    color: white;
+    transition-duration: 0.4s;
+  }
+  .task-bar{
+    height: 60px;
+    width: 1700px;
+    background-color: salmon;
+
+    align-items: center;
+}
+#App-Name{
+    font-size: 35px;
+    padding-left: 15%;
+    padding-right: 15px;
+    float: left;
+    margin-top: 5px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    justify-content: center;
+}
+
+html{
+    background-color: #5F6A6A;
+    height: auto;
+    width: auto;
+}
+.meat{
+position: relative;
+display: relative;
+float: left;
+margin-left: -30%;
+margin-top: 25px;
+text-align: center;
+
+}
+.vegetarian{
+    position: relative;
+    display: relative;
+    float: left;
+    margin-left: 0%;
+    margin-top: 25px;
+    text-align: center;
+ }
+ .egg{
+    position: relative;
+    display: relative;
+    float: left;
+    margin-left: 25px;
+    margin-top: 25px;
+    text-align: center;
+ }
+
+#image:hover{
+    opacity: 75%;
+    background-color:black ;
+    cursor:pointer;
+}
+.categories{
+    width: 1600px;
+    height: 1200px;
+    background-color: grey;
+}
+#title{
+    position:absolute;
+    top: 25%;
+    left: 40%;
+    color: white;
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;;
+}

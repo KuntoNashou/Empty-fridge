@@ -1,0 +1,49 @@
+.bar{
+    background-color: black;
+    box-shadow: #959595;
+    height: 150px;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: -8px;
+    align-items: center;
+    text-align: center;
+    float: left;
+    border-radius: 5px;
+}
+html{
+    background-color: salmon;
+    height: auto;
+    width: auto;
+}
+#bar-text1{
+    font-family: 'Roboto', sans-serif;
+    Color: #ffff;
+}
+#icon{
+    float: left;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+.background{
+    background-color: #151515;
+    height: 2000px;
+    width: 1200px;
+    float: right;
+    border-radius: 10px;
+}
+h1{
+    color: #ffff;
+    font-family: 'Roboto', sans-serif;
+    text-align: center ;
+}
+#recipe1{
+    height: 100px;
+    width:100px;
+    background-color: aqua;
+}
+#test{
+    height:100px;
+    width:100px;
+    background-color: #151515;
+    margin-left: 15%;
+}

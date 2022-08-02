@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="" 
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Home</title>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style2.css">
+        <script href="script.js"></script>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Alata|Josefin+Sans|Maven+Pro&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Alata|Josefin+Sans|Maven+Pro&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon"> 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    </head>
+
+<!--Loading-->
+    <div class="main">
+        <div class="loader">
+            <img src="images/load.gif" alt="Loading..." />
+        </div>
+
+        <script>window.addEventListener("load", function () {
+            const loader = document.querySelector(".loader");
+            loader.className += " hidden"; // class "loader hidden"
+        });</script>
+            
+
+        
+        <div class="title">
+            <h1 style="font-family: 'Kanit', sans-serif;">Cook easly and fast with empty fridge</h1>
+        </div>
+        <div class="text">
+            <h3 id="instructions">Start by selecting food that you have in your fridge or in your kitchen.
+                After we are making your simple recipes, you choose your favorite and just need to cook.
+            </h3>
+            <div class="background" id="all">
+                <h2>Select your food, or search it.</h2>
+
+              
+                
+                <div id ="portfolio" class="text-center paddsection">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+            
+                                
+                                
+<!--search bar-->
+<form action="" class="search-bar">
+    <input id="myinput" type="text"  placeholder="Search..." class="form-control" pattern=".*\S.*" required><br><br>
+    <button class="search-btn" type="submit">
+      <span>Search</span>
+    </button>
+  </form>
+  
+
+<!--food-->
+              <div class="col-md-4 portfolio-thumbnail ">
+                    <div class="row tos" id="food">
+                        <div class="tos-content">
+                    <div class="bread" >
+                        <label class="switch">
+                            <h4 id="food-title">Bread</h4>
+                            <input type="checkbox"onclick="checkedbread()" id="my-checkbox">
+                         <div class="inside-bread">
+                                <img src="images/bread.jpg" height="150px" width="150px" style="border-radius: 10px ;" alt="Avatar"></src>
+            
+                                 <span class="slider">
+                            </span>
+                          </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+                </div>
+
+                
+                
+            <div class="row tos" id="food">
+                <div class="tos-content">
+            <div  class="bacon">
+                <label class="switch">
+                    <p id="food-title">Bacon</p>
+                    <input type="checkbox"onclick="checkedbacon()" id="my-checkbox5" height="20px" width="20px">
+                <div class="inside-bacon">
+                    <img src="images/bacon.jpg" height="150px" width="150px" style="border-radius: 10px ;" alt="Avatar"></src>
+
+                    <span class="slider">
+                    </span>
+                  </label>
+                </div>
+            </div>
+        </div>
+        </div>
+    
+
+             <div class="row tos"  id="food">
+                <div class="tos-content">
+                <div class="cheese" >
+                    <label class="switch">
+                        <h4 id="food-title"><b>Cheese</b></h4>
+                        <input type="checkbox"onclick="checkedcheese()" id="my-checkbox2" height="20px" width="20px">
+                    <div class="inside-cheese">
+                            <img src="images/cheese.jpg" height="150px" width="150px" style="border-radius: 10px ;"></src>
+                            <span class="slider">
+                        </span>
+                      </label>
+                    </div>
+                 </div>
+             </div>
+             </div>
+            
+
+
+            <div class="row tos"  id="food">
+                <div class="tos-content">                   
+                      <div class="steak" >
+                        <label class="switch">
+                            <p id="food-title">Steak</p>
+                            <input type="checkbox"onclick="checkedsteak()" id="my-checkbox3" height="20px" width="20px">
+                        <div class="inside-steak">
+                            <img src="images/steak.jpg" height="150px" width="150px" style="border-radius: 10px ;"></src>
+                            <span class="slider">
+                            </span>
+                          </label>
+                        </div>
+                    </div>
+                    </div>
+    </div>  
+                        
+                    <div class="row tos"  id="food">
+                         <div class="tos-content">
+                          <div class="lettuce">  
+                            <label class="switch">
+                                <p id="food-title">Lettuce</p>
+                                <input type="checkbox"onclick="checkedlettuce()" id="my-checkbox4" height="20px" width="20px">
+                            <div class="inside-lettuce">
+                                <img src="images/lettuce.jpg" height="150px" width="150px" style="border-radius: 10px ;"></src>
+                                <span class="slider">
+                                </span>
+                              </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                    <div class="row tos"  id="food" >
+                        <div class="tos-content">
+                        <div class="pasta" id="food">
+                            <label class="switch">
+                                <p id="food-title">Pasta</p>
+                                <input type="checkbox"onclick="checkedpasta()" id="my-checkbox6" height="20px" width="20px">
+                            <div class="inside-pasta">
+                                <img src="images/pasta.jpg" height="150px" width="150px" style="border-radius: 10px ;"></src>
+                                <span class="slider">
+                                </span>
+                              </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                        <div class="row tos"  id="food">
+                            <div class="tos-content">
+                            <div class="tomato" id="food">
+                                <label class="switch">
+                                    <p id="food-title">Tomato</p>
+                                    <input type="checkbox"onclick="checkedtomato()" id="my-checkbox7" height="20px" width="20px">
+                                <div class="inside-tomato">
+                                    <img src="images/tomato.jpg" height="150px" width="150px" style="border-radius: 10px ;"></src>
+                                    <span class="slider">
+                                    </span>
+                                  </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                            <div class="row tos"  id="food" >
+                                <div class="tos-content">
+                                <div class="rice" id="food">
+                                    <label class="switch">
+                                        <p id="food-title">Rice</p>
+                                        <input type="checkbox"onclick="checkedrice()" id="my-checkbox9" height="20px" width="20px">
+                                    <div class="inside-rice">
+                                        <img src="images/rice.jpg" height="150px" width="150px" style="border-radius: 10px ;"></src>
+                                        <span class="slider">
+                                        </span>
+                                      </label>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+
+                                <div class="row tos"  id="food">
+                                    <div class="tos-content">
+                                    <div class="onion" id="food">
+                                        <label class="switch">
+                                            <p id="food-title">Onion</p>
+                                            <input type="checkbox"onclick="checkedonion()" id="my-checkbox10" height="20px" width="20px">
+                                        <div class="inside-onion">
+                                            <img src="images/onion.jpg" height="150px" width="150px" style="border-radius: 10px ;"></src>
+                                            <span class="slider">
+                                            </span>
+                                          </label>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+
+                            <div class="row tos"  id="food">
+                                <div class="tos-content">
+                                <div class="potato" id="food">
+                                    <label class="switch">
+                                        <p id="food-title">Potato</p>
+                                        <input type="checkbox"onclick="checkedpotato()" id="my-checkbox12" height="20px" width="20px">
+                                    <div class="inside-potato">
+                                        <img src="images/potato.avif" height="150px" width="150px" style="border-radius: 10px ;"></src>
+                                        <span class="slider">
+                                        </span>
+                                      </label>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+
+                        <div class="row tos"  id="food">
+                            <div class="tos-content">
+                            <div class="flour" id="food">
+                                <label class="switch">
+                                    <p id="food-title">flour</p>
+                                    <input type="checkbox"onclick="checkedflour()" id="my-checkbox13" height="20px" width="20px">
+                                <div class="inside-flour">
+                                    <img src="images/flour.jpg" height="150px" width="150px" style="border-radius: 10px ;"></src>
+                                    <span class="slider">
+                                    </span>
+                                  </label>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+
+                    <div class="row tos"  id="food">
+                        <div class="tos-content">
+                        <div class="cream" id="food">
+                            <label class="switch">
+                                <p id="food-title">Light cream cheese</p>
+                                <input type="checkbox"onclick="checkedcream()" id="my-checkbox14" height="20px" width="20px">
+                            <div class="inside-cream">
+                                <img src="images/cream.jpg" height="150px" width="150px" style="border-radius: 10px ;"></src>
+                                <span class="slider">
+                                </span>
+                              </label>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+
+                            <div class="row tos"  id="food">
+                                <div class="tos-content">
+                                <div class="milk" id="food">
+                                    <label class="switch">
+                                        <p id="food-title">Milk</p>
+                                        <input type="checkbox"onclick="checkedmilk()" id="my-checkbox11" height="20px" width="20px">
+                                    <div class="inside-milk">
+                                        <img src="images/milk.jpg" height="150px" width="150px" style="border-radius: 10px ;"></src>
+                                        <span class="slider">
+                                        </span>
+                                      </label>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+
+                        <div class="row tos"  id="food">
+                            <div class="tos-content">
+                            <div class="butter" id="food">
+                                <label class="switch">
+                                    <p id="food-title">Butter</p>
+                                    <input type="checkbox"onclick="checkedbutter()" id="my-checkbox15" height="20px" width="20px">
+                                <div class="inside-butter">
+                                    <img src="images/butter.jpg" height="150px" width="150px" style="border-radius: 10px ;"></src>
+                                    <span class="slider">
+                                    </span>
+                                  </label>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+
+
+                            <div class="row tos"  id="food">
+                                <div class="tos-content">
+                                <div class="egg" id="food"> 
+                                    <label class="switch">
+                                        <p id="food-title">Egg</p>
+                                        <input type="checkbox"onclick="checkedegg()" id="my-checkbox8" height="20px" width="20px">
+                                    <div class="inside-egg">
+                                        <img src="images/egg.jpg" height="150px" width="150px" style="border-radius: 10px ;"></src>
+                                        <span class="slider">
+                                        </span>
+                                      </label>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+
+                        <div class="row tos"  id="food">
+                            <div class="tos-content">
+                            <div class="carrots" id="food"> 
+                                <label class="switch">
+                                    <p id="food-title">Carrots</p>
+                                    <input type="checkbox"onclick="checkedcarrots()" id="my-checkbox16" height="20px" width="20px">
+                                <div class="inside-carrots">
+                                    <img src="images/carrots.jpg" height="150px" width="150px" style="border-radius: 10px ;"></src>
+                                    <span class="slider">
+                                    </span>
+                                  </label>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+
+                    
+                
+                 
+                        
+<!--recipes-->        
+                <div class="recipes" id="fried-ricebeef">
+                    <a href="Fried rice with beef.html">
+                    <img src="images/fried-rice-beef.jpg" height="220px" width="180px" style="border-radius: 5px;">
+                    <p id="titlerecipe">Fried Rice with beef</p>
+                    <p id="time">20min</p>
+                    <p id="difficulty">Medium</p>
+                    
+                        <span class="link"></span>
+                        
+                    </a> 
+                </div>
+
+                    <div class="recipes" id="sandwich">
+                        <a href="sample(work).html">   
+                        <img src="images/sandwichBacon.jpg" height="220px" width="180px" style="border-radius: 5px;">
+                        <p id="titlerecipe">American bacon sandwich</p>
+                        <p id="time">10min</p>
+                        <p id="difficulty">easy</p>
+                        <span class="link"></span>
+                    </a> 
+                       
+                    </div>
+
+                    <div class="recipes" id="carbonara">
+                        <a href="Caronara.html">
+                        <img src="images/carbonara.jpg" height="220px" width="180px" style="border-radius: 5px;">
+                        <p id="titlerecipe">Pasta with Carbonara</p>
+                        <p id="time">15min</p>
+                        <p id="difficulty">easy</p>
+                        <a href="Caronara.html">
+                            <span class="link"></span>
+                        </a> 
+                    </div>
+
+                    <div class="recipes" id="cacio">
+                        <a href="Cacio.html">
+                        <img src="images/cacio.jpg" height="220px" width="180px" style="border-radius: 5px;">
+                        <p id="titlerecipe">Cacio e Pepe Scrambled Eggs</p>
+                        <p id="time">15min</p>
+                        <p id="difficulty">super easy</p>
+                        
+                            <span class="link"></span>
+                        </a> 
+                    </div>
+
+                    <div class="recipes" id="omelette">
+                        <a href="omelette.html">
+                        <img src="images/omelette.jpg" height="220px" width="180px" style="border-radius: 5px;">
+                        <p id="titlerecipe" >Omelette</p>
+                        <p id="time">7min</p>
+                        <p id="difficulty">super easy</p>
+                        
+                            <span class="link"></span>
+                        </a> 
+                    </div>
+
+                    <div class="recipes" id="potato-pancake">
+                        <a href="potato-pancake.html">
+                        <img src="images/potato-pancake.jpg" height="220px" width="180px" style="border-radius: 5px;">
+                        <p id="titlerecipe">Potato Pancake</p>
+                        <p id="time">20min</p>
+                        <p id="difficulty"> easy</p>
+                        
+                            <span class="link"></span>
+                        </a> 
+                    </div>
+
+                    <div class="recipes" id="french-fries">
+                        <a href="french-fries.html">
+                        <img src="images/french-fries.jpg" height="220px" width="180px" style="border-radius: 5px;">
+                        <p id="titlerecipe">French Fries</p>
+                        <p id="time">20min</p>
+                        <p id="difficulty">very easy</p>
+                        
+                            <span class="link"></span>
+                        </a> 
+                    </div>
+
+                    <div class="recipes" id="croque-monsieur">
+                        <a href="croque-monsieur.html">
+                        <img src="images/croque-monsieur.webp" height="220px" width="180px" style="border-radius: 5px;">
+                        <p id="titlerecipe">Croque Monsieur</p>
+                        <p id="time">15min</p>
+                        <p id="difficulty">very easy</p>
+                        <a href="croque-monsieur.html">
+                            <span class="link"></span>
+                        </a> 
+                    </div>
+
+                    <div class="recipes" id="crispy-potatoes">
+                        <a href="crispy-potatoes.html">
+                        <img src="images/crispy-potatoes.jpg" height="220px" width="180px" style="border-radius: 5px;">
+                        <p id="titlerecipe">Crispy roasted Potatoes</p>
+                        <p id="time">25min</p>
+                        <p id="difficulty"> easy</p>
+                        
+                            <span class="link"></span>
+                        </a> 
+                    </div>
+
+                    <div class="recipes" id="spaghetti-bolognaise">
+                        <a href="spaghetti-bolognaise.html">
+                        <img src="images/spaghetti-bolognaise.avif" height="220px" width="180px" style="border-radius: 5px;">
+                        <p id="titlerecipe">spaghetti bolognaise</p>
+                        <p id="time">25min</p>
+                        <p id="difficulty"> easy</p>
+                        
+                            <span class="link"></span>
+                        </a> 
+                    </div>
+
+                    <div class="recipes" id="glazed-carrots">
+                        <a href="glazed-carrots.html">
+                        <img src="images/glazed-carrots.jpg" height="220px" width="180px" style="border-radius: 5px;">
+                        <p id="titlerecipe">Glazed Carrots</p>
+                        <p id="time">40min</p>
+                        <p id="difficulty"> easy</p>
+                        
+                            <span class="link"></span>
+                        </a> 
+                    </div>
+
+                    <div class="recipes" id="potato-salad">
+                        <a href="potato-salad.html">
+                        <img src="images/potato-salad.jpg" height="220px" width="180px" style="border-radius: 5px;">
+                        <p id="titlerecipe">Potato Salad </p>
+                        <p id="time">50min</p>
+                        <p id="difficulty"> medium</p>
+                        
+                            <span class="link"></span>
+                        </a> 
+                    </div>
+
+                        <div class="recipes" id="risoto">
+                            <a href="risoto.html">
+                            <img src="images/risoto.jpg" height="220px" width="180px" style="border-radius: 5px;">
+                            <p id="titlerecipe">Risoto </p>
+                            <p id="time">25min</p>
+                            <p id="difficulty"> easy</p>
+                            
+                                <span class="link"></span>
+                            </a> 
+                </div>
+
+                <div class="recipes" id="beef-croquette">
+                    <a href="beef-croquette.html">
+                    <img src="images/beef-croquette.jpg" height="220px" width="180px" style="border-radius: 5px;">
+                    <p id="titlerecipe">Beef Croquette </p>
+                    <p id="time">30min</p>
+                    <p id="difficulty"> super easy</p>
+                    
+                        <span class="link"></span>
+                    </a> 
+            </div>
+
+            <div class="recipes" id="boiled-egg">
+                <a href="boiled-egg.html">
+                <img src="images/boiled-egg.jpg" height="220px" width="180px" style="border-radius: 5px;">
+                <p id="titlerecipe">Boiled Egg </p>
+                <p id="time">10min</p>
+                <p id="difficulty"> super easy </p>
+                
+                    <span class="link"></span>
+                </a> 
+            </div>
+
+            <div class="recipes" id="mac-cheese">
+                <a href="mac-cheese.html">
+                <img src="images/mac-cheese.jpg" height="220px" width="180px" style="border-radius: 5px;">
+                <p id="titlerecipe">Macaroni and Cheese </p>
+                <p id="time">25min</p>
+                <p id="difficulty">  easy </p>
+                
+                    <span class="link"></span>
+                </a> 
+            </div>
+
+
+
+                </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            
+                </main>
+        
+                    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+                        <script type="text/javascript">
+
+$(document).ready(function(){
+		$("#myinput").on("keyup",function(){
+		var value = $(this).val().toLowerCase();
+		$("#food ").filter(function(){
+			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+
+		});
+	});
+		});
+
+                            $(function () {
+                                $('#sandwich').hide();
+                                $('.tos').click(function () {
+                                    var checks = $("#my-checkbox, #my-checkbox4, #my-checkbox5, #my-checkbox7");
+                                    if (checks.filter(':checked').length == 4) {
+                                        $('#sandwich').show();
+                                    } else if (checks.filter(':checked').length == 0) {
+
+                                        $('#sandwich').hide();
+                                    } else {
+                                        $('#sandwich').hide();
+                                    }
+                                });
+                            });
+
+                            $(function () {
+                                $('#fried-ricebeef').hide();
+                                $('.tos').click(function () {
+                                    var checks = $("#my-checkbox8, #my-checkbox9, #my-checkbox10, #my-checkbox3");
+                                    if (checks.filter(':checked').length == 4) {
+                                        $('#fried-ricebeef').show();
+                                    } else if (checks.filter(':checked').length == 0) {
+
+                                        $('#fried-ricebeef').hide();
+                                    } else {
+                                        $('#fried-ricebeef').hide();
+                                    }
+                                });
+                            });
+
+                            $(function () {
+                                $('#carbonara').hide();
+                                $('.tos').click(function () {
+                                    var checks = $("#my-checkbox5, #my-checkbox6, #my-checkbox2");
+                                    if (checks.filter(':checked').length == 3) {
+                                        $('#carbonara').show();
+                                    } else if (checks.filter(':checked').length == 0) {
+
+                                        $('#carbonara').hide();
+                                    } else {
+                                        $('#carbonara').hide();
+                                    }
+                                });
+                            });
+                             $(function () {
+                                $('#cacio').hide();
+                                $('.tos').click(function () {
+                                    var checks = $("#my-checkbox, #my-checkbox8, #my-checkbox11");
+                                    if (checks.filter(':checked').length == 3) {
+                                        $('#cacio').show();
+                                    } else if (checks.filter(':checked').length == 0) {
+
+                                        $('#cacio').hide();
+                                    } else {
+                                        $('#cacio').hide();
+                                    }
+                                });
+                            });
+                            $(function () {
+                                $('#omelette').hide();
+                                $('.tos').click(function () {
+                                    var checks = $("#my-checkbox8");
+                                    if (checks.filter(':checked').length == 1) {
+                                        $('#omelette').show();
+                                    } else if (checks.filter(':checked').length == 0) {
+
+                                        $('#omelette').hide();
+                                    } else {
+                                        $('#omelette').hide();
+                                    }
+                                });
+                            });
+
+                            $(function () {
+                                $('#potato-pancake').hide();
+                                $('.tos').click(function () {
+                                    var checks = $("#my-checkbox13, #my-checkbox8, #my-checkbox12, #my-checkbox10 ");
+                                    if (checks.filter(':checked').length == 4) {
+                                        $('#potato-pancake').show();
+                                    } else if (checks.filter(':checked').length == 0) {
+
+                                        $('#potato-pancake').hide();
+                                    } else {
+                                        $('#potato-pancake').hide();
+                                    }
+                                });
+                            });
+
+                            $(function () {
+                                $('#pasta-cream').hide();
+                                $('.tos').click(function () {
+                                    var checks = $("#my-checkbox14, #my-checkbox10, #my-checkbox6, #my-checkbox3 ");
+                                    if (checks.filter(':checked').length == 4) {
+                                        $('#pasta-cream').show();
+                                    } else if (checks.filter(':checked').length == 0) {
+
+                                        $('#pasta-cream').hide();
+                                    } else {
+                                        $('#pasta-cream').hide();
+                                    }
+                                });
+                            });
+
+                            $(function () {
+                                $('#french-fries').hide();
+                                $('.tos').click(function () {
+                                    var checks = $("#my-checkbox12");
+                                    if (checks.filter(':checked').length == 1) {
+                                        $('#french-fries').show();
+                                    } else if (checks.filter(':checked').length == 0) {
+
+                                        $('#french-fries').hide();
+                                    } else {
+                                        $('#french-fries').hide();
+                                    }
+                                });
+                            });
+
+                            $(function () {
+                                $('#croque-monsieur').hide();
+                                $('.tos').click(function () {
+                                    var checks = $("#my-checkbox2, #my-checkbox, #my-checkbox15, #y-checkbox5");
+                                    if (checks.filter(':checked').length == 3) {
+                                        $('#croque-monsieur').show();
+                                    } else if (checks.filter(':checked').length == 0) {
+
+                                        $('#croque-monsieur').hide();
+                                    } else {
+                                        $('#croque-monsieur').hide();
+                                    }
+                                });
+                            });
+
+                            $(function () {
+                                $('#crispy-potatoes').hide();
+                                $('.tos').click(function () {
+                                    var checks = $("#my-checkbox12");
+                                    if (checks.filter(':checked').length == 1) {
+                                        $('#crispy-potatoes').show();
+                                    } else if (checks.filter(':checked').length == 0) {
+
+                                        $('#crispy-potatoes').hide();
+                                    } else {
+                                        $('#crispy-potatoes').hide();
+                                    }
+                                });
+                            });
+
+                            $(function () {
+                                $('#spaghetti-bolognaise').hide();
+                                $('.tos').click(function () {
+                                    var checks = $("#my-checkbox6, #my-checkbox3, #my-checkbox7, #my-checkbox10");
+                                    if (checks.filter(':checked').length == 4) {
+                                        $('#spaghetti-bolognaise').show();
+                                    } else if (checks.filter(':checked').length == 0) {
+
+                                        $('#spaghetti-bolognaise').hide();
+                                    } else {
+                                        $('#spaghetti-bolognaise').hide();
+                                    }
+                                });
+                            });
+
+                            $(function () {
+                                $('#glazed-carrots').hide();
+                                $('.tos').click(function () {
+                                    var checks = $("#my-checkbox16, #my-checkbox15");
+                                    if (checks.filter(':checked').length == 2) {
+                                        $('#glazed-carrots').show();
+                                    } else if (checks.filter(':checked').length == 0) {
+
+                                        $('#glazed-carrots').hide();
+                                    } else {
+                                        $('#glazed-carrots').hide();
+                                    }
+                                });
+                            });
+
+                            $(function () {
+                                $('#potato-salad').hide();
+                                $('.tos').click(function () {
+                                    var checks = $("#my-checkbox10, #my-checkbox12");
+                                    if (checks.filter(':checked').length == 2) {
+                                        $('#potato-salad').show();
+                                    } else if (checks.filter(':checked').length == 0) {
+
+                                        $('#potato-salad').hide();
+                                    } else {
+                                        $('#potato-salad').hide();
+                                    }
+                                });
+                            });
+
+                            $(function () {
+                                $('#beef-croquette').hide();
+                                $('.tos').click(function () {
+                                    var checks = $("#my-checkbox10, #my-checkbox3, #my-checkbox12, #my-checkbox8");
+                                    if (checks.filter(':checked').length == 4) {
+                                        $('#beef-croquette').show();
+                                    } else if (checks.filter(':checked').length == 0) {
+
+                                        $('#beef-croquette').hide();
+                                    } else {
+                                        $('#beef-croquette').hide();
+                                    }
+                                });
+                            });
+
+                            $(function () {
+                                $('#risoto').hide();
+                                $('.tos').click(function () {
+                                    var checks = $("#my-checkbox9, #my-checkbox15, #my-checkbox2, #my-checkbox10");
+                                    if (checks.filter(':checked').length == 4) {
+                                        $('#risoto').show();
+                                    } else if (checks.filter(':checked').length == 0) {
+
+                                        $('#risoto').hide();
+                                    } else {
+                                        $('#risoto').hide();
+                                    }
+                                });
+                            });
+
+                            $(function () {
+                                $('#boiled-egg').hide();
+                                $('.tos').click(function () {
+                                    var checks = $("#my-checkbox8, #my-checkbox");
+                                    if (checks.filter(':checked').length == 2) {
+                                        $('#boiled-egg').show();
+                                    } else if (checks.filter(':checked').length == 0) {
+
+                                        $('#boiled-egg').hide();
+                                    } else {
+                                        $('#boiled-egg').hide();
+                                    }
+                                });
+                            });
+
+                            $(function () {
+                                $('#mac-cheese').hide();
+                                $('.tos').click(function () {
+                                    var checks = $("#my-checkbox6, #my-checkbox15, #my-checkbox13, #my-checkbox11, #my-checkbox2");
+                                    if (checks.filter(':checked').length == 5) {
+                                        $('#mac-cheese').show();
+                                    } else if (checks.filter(':checked').length == 0) {
+
+                                        $('#mac-cheese').hide();
+                                    } else {
+                                        $('#mac-cheese').hide();
+                                    }
+                                });
+                            });
+                            
+                        </script>   
+                        </div>               
+         </div> 
+    </div>
+
+
+  
+</html>
